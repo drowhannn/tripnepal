@@ -48,6 +48,7 @@ if ($res->num_rows == 0) {
     $is_transport = $package['is_transport'];
     $is_food = $package['is_food'];
     $is_guide = $package['is_guide'];
+    $is_exclusive = $package['is_exclusive'];
     // var_dump($package);
 }
 
@@ -128,6 +129,14 @@ if ($res->num_rows == 0) {
                             <label for="ex2">Extra Image 2</label>
                             <input type="text" name="ex2" id="ex2" value="<?php echo $extra_image_2 ?>">
                         </div>
+                    </div>
+                    <div class="">
+                        <div class="input-group">
+                            <label>Additional Info</label>
+                        </div>
+                        <input type="checkbox" name="is_exclusive" id="is_exclusive"
+                            value="<?php echo $is_exclusive ?>" <?php if ($is_exclusive == 1) echo 'checked' ?> > <label
+                        > <label for="is_exclusive">Exclusive</label>
                     </div>
                     <div class="row">
                         <input type="submit" value="Update" name="submit" class="btn" />

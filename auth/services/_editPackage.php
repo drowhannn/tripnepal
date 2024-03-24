@@ -13,6 +13,11 @@ if (isset($_POST['package_id']) && isset($_POST['package_name']) && isset($_POST
     $package_capacity = $_POST['capacity'];
     $package_location = $_POST['loc'];
     $map_loc = $_POST['map'];
+    $is_exclusive = 0;
+
+    if (isset($_POST['is_exclusive'])) {
+        $is_exclusive = 1;
+    }
 
     $is_hotel = 0;
     $is_transport = 0;
@@ -36,7 +41,7 @@ if (isset($_POST['package_id']) && isset($_POST['package_name']) && isset($_POST
 
     $packagesInstance = new Packages();
 
-    $packagesInstance->updatePackage($package_id, $package_name, $package_desc, $package_start, $package_end, $package_price, $package_location, $is_hotel, $is_transport, $is_food, $is_guide, $package_capacity, $map_loc, $master_image, $extra_image_1, $extra_image_2);
+    $packagesInstance->updatePackage($package_id, $package_name, $package_desc, $package_start, $package_end, $package_price, $package_location, $is_hotel, $is_transport, $is_food, $is_guide, $package_capacity, $map_loc, $master_image, $extra_image_1, $extra_image_2, $is_exclusive);
 
     echo "<script> location.href = '../packages.php' </script>";
 }
