@@ -104,9 +104,6 @@ $user = mysqli_fetch_assoc($res);
                         </table>
                     </div>
                     <div class="row">
-                        <div class="col-xl-8">
-                            <p>All payments are verified by SSL Commerz</p>
-                        </div>
                         <div class="col-xl-3">
                             <ul class="list-unstyled">
                                 <li class="text-muted ms-3"><span class="text-black me-4">SubTotal</span> Rs. <?php echo $total ?></li>

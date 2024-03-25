@@ -186,6 +186,8 @@ ul{
 
 .container .content .content-2.dashboard {
     display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
     flex-wrap: wrap;
     width: 100%;
 }

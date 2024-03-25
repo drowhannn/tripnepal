@@ -105,9 +105,6 @@ if (isset($_GET['package_id']) && isset($_GET["user_id"])) {
                         </table>
                     </div>
                     <div class="row">
-                        <div class="col-xl-8">
-                            <p>The payment is verified by SSL Commerz</p>
-                        </div>
                         <div class="col-xl-3">
                             <ul class="list-unstyled">
                                 <li class="text-muted ms-3"><span class="text-black me-4">SubTotal</span>Rs. <?php echo $trans_amount ?></li>
