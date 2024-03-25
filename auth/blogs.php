@@ -43,11 +43,13 @@ if (!isset($_SESSION["is_admin"])) {
                         <i class="fa-solid fa-cube"></i>
                     </div>
                 </div>
-                <div class="card add-package">
-                    <div class="box">
-                        <a href="./new_blog.php"> Add New Blog </a>
+                <a href="./new_blog.php">
+                    <div class="card add-package">
+                        <div class="box">
+                            Add New Blog 
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="content-2">
                 <div class="blogs-container">
