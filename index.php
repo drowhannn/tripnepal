@@ -60,19 +60,19 @@
         <div class="trending">
             <div>
                 <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSaD8MQXhfdj36aBRxsCJxMWurXX4ORwwrm28kg4Ub4StkycAlNle7ShRGma95M5dOgumC2iEg-f82BMpZOwtWS4nvNbCgQZx62kEL7JN4">
-                <h3><a href="https://en.wikipedia.org/wiki/Mount_Everest">Mount Everest</a></h3>
+                <h3><a href="/triptrip/listing.php?loc=Mount Everest">Mount Everest</a></h3>
             </div>
             <div>
                 <img src="https://lh5.googleusercontent.com/p/AF1QipNdu5OF1YucfXVyRjuv12dExGX_RHewGeo0oeEE=w675-h390-n-k-no">
-                <h3><a href="https://en.wikipedia.org/wiki/Pokhara">Pokhara</a></h3>
+                <h3><a href="/triptrip/listing.php?loc=Pokhara">Pokhara</a></h3>
             </div>
             <div>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/BRP_Lumbini_Mayadevi_temple.jpg">
-                <h3><a href="https://en.wikipedia.org/wiki/Lumbini">Lumbini</a></h3>
+                <h3><a href="/triptrip/listing.php?loc=Lumbini">Lumbini</a></h3>
             </div>
             <div>
                 <img src="https://www.andbeyond.com/wp-content/uploads/sites/5/indian-elephant-chitwan-nepal.jpg">
-                <h3><a href="https://en.wikipedia.org/wiki/Chitwan_National_Park">Chitwan National Park</a></h3>
+                <h3><a href="/triptrip/listing.php?loc=Chitwan National Park">Chitwan National Park</a></h3>
             </div>
         </div>
 
