@@ -10,7 +10,9 @@
 <body>
     <div class="header">
         <nav id="navBar">
-            <a href="./index.php" class="logo"> triptrip </a>
+            <a href="./index.php" class="logo">
+            <img src="./assets/logo-white.png" alt="tripnepal" style="width: 10rem;"/>
+        </a>
             <ul class="nav-links">
                 <li><a href="./index.php" class="active">Popular Places</a></li>
                 <li><a href="./listing.php">All packages</a></li>

@@ -43,7 +43,9 @@ if (isset($_SESSION['logged_in'])) {
 
 <body>
     <nav id='navBar' class='navbar-white'>
-        <a href='./index.php' class='logo'> triptrip </a>
+        <a href='./index.php' class='logo'>
+            <img src="./assets/logo.png" alt="tripnepal" style="width: 10rem;"/>
+        </a>
         <ul class='nav-links'>
             <li><a href='./index.php'>Popular Places</a></li>
             <li><a href='./listing.php'>All packages</a></li>
@@ -71,7 +73,7 @@ if (isset($_SESSION['logged_in'])) {
                 "<li>
             <i class='fa-solid fa-hotel'></i>Hotel <br>
             <span>
-                Hotel is<strong class='brand-inline brand'>triptrip </strong> verified with excellent
+                Hotel is<strong class='brand-inline brand'>tripnepal </strong> verified with excellent
                 customer service.
             </span>
         </li>";

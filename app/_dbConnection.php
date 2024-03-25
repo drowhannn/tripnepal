@@ -145,6 +145,72 @@ class Packages extends Database
     }
 }
 
+class Blogs extends Database
+{
+    public function createBlog($title, $content, $image, $author)
+    {
+        $this->connect();
+        $title = mysqli_real_escape_string($this->conn, $title);
+        $content = mysqli_real_escape_string($this->conn, $content);
+        $image = mysqli_real_escape_string($this->conn, $image);
+        $author = mysqli_real_escape_string($this->conn, $author);
+
+        $sql = "INSERT INTO blogs (title,content,image,author) VALUES('$title','$content','$image','$author')";
+        $this->conn->query($sql);
+
+        $this->conn->close();
+        return '200';
+    }
+    public function updateBlog($id, $title, $content, $image, $author)
+    {
+        $this->connect();
+        $title = mysqli_real_escape_string($this->conn, $title);
+        $content = mysqli_real_escape_string($this->conn, $content);
+        $image = mysqli_real_escape_string($this->conn, $image);
+        $author = mysqli_real_escape_string($this->conn, $author);
+
+        $sql = "UPDATE blogs SET title = '$title', content = '$content', image = '$image', author = '$author' WHERE id = $id";
+        $this->conn->query($sql);
+
+        $this->conn->close();
+        return '200';
+    }
+    public function getBlogs($limit = 1000)
+    {
+        $this->connect();
+        $sql = "SELECT * FROM blogs ORDER BY id DESC LIMIT $limit";
+        $result = $this->conn->query($sql);
+
+        $this->conn->close();
+        return $result;
+    }
+    public function getBlog($id)
+    {
+        $this->connect();
+        $sql = "SELECT * FROM blogs WHERE id = $id";
+        $result = $this->conn->query($sql);
+
+        $this->conn->close();
+        return $result;
+    }
+    public function getBlogCount()
+    {
+        $this->connect();
+        $sql = "SELECT * FROM blogs";
+        $result = $this->conn->query($sql);
+        $this->conn->close();
+        return $result->num_rows;
+    }
+    public function deleteBlog($id)
+    {
+        $this->connect();
+        $sql = "DELETE FROM blogs WHERE id = $id";
+        $this->conn->query($sql);
+        $this->conn->close();
+        return '200';
+    }
+}
+
 class Auth extends Database
 {
     public function checkUserName($username)

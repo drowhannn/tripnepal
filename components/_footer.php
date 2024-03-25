@@ -1,5 +1,5 @@
 <div class="about-msg">
-    <h2>About <span class="brand">triptrip</span></h2>
+    <h2>About <span class="brand">tripnepal</span></h2>
     <p style="width:70%; margin:auto;">
     Welcome to our travel website! We specialize in exciting adventures in Nepal. Imagine hiking through breathtaking landscapes, trekking to stunning viewpoints, and rafting down thrilling rivers.
     <br/>

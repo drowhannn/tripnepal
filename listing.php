@@ -24,7 +24,9 @@ $page_number = isset($_GET["page"]) && is_numeric($_GET["page"]) && $_GET["page"
 
 <body>
     <nav id='navBar' class='navbar-white'>
-        <a href='./index.php' class='logo'> triptrip </a>
+        <a href='./index.php' class='logo'>
+        <img src="./assets/logo.png" alt="tripnepal" style="width: 10rem;"/>
+        </a>
         <ul class='nav-links'>
             <li><a href='./index.php'>Popular Places</a></li>
             <li><a href='./listing.php' class='active'>All packages</a></li>
@@ -39,7 +41,7 @@ $page_number = isset($_GET["page"]) && is_numeric($_GET["page"]) && $_GET["page"
                 <div>
                 </div>
                 <div class='sidebar'>
-                    <p>Search for your desired destination and get <span class="brand brand-inline">triptrip</span> selected packages.</0>
+                    <p>Search for your desired destination and get <span class="brand brand-inline">tripnepal</span> selected packages.</0>
                     <form class='search-listing' id="search-form">
                         <?php
                         echo "<input type='text' id='sidebar-search-input' name='sidebar-search-input' value=\"$location\" placeholder='Where are you going?'>";
@@ -61,7 +63,7 @@ $page_number = isset($_GET["page"]) && is_numeric($_GET["page"]) && $_GET["page"
                 }
               
                 echo "<p class='available-package'>Total <span id='all-packages-count'>$allPackages</span> Package(s) Available</p>
-                <h1>Find Your Suitable Package in <span class='brand'>triptrip</span></h1>
+                <h1>Find Your Suitable Package in <span class='brand'><img src='./assets/logo.png' alt='tripnepal' style='width: 10rem;'/></span></h1>
                 <div class='package-container'>";
                 while ($row = mysqli_fetch_assoc($res)) {
                     $stars = "";

@@ -192,6 +192,14 @@ ul{
     width: 100%;
 }
 
+.container .content .content-2 .blogs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0 25px;
+}
+
 .container .content .content-2 .recent-payments {
     flex: 5;
     background: white;

@@ -56,7 +56,9 @@ if (isset($_GET['package_id']) && isset($_GET["user_id"])) {
                     <div class="col-md-12">
                         <div class="text-center">
                             <i class="fab fa-mdb fa-4x ms-0"></i>
-                            <p class="pt-0 brand">triptrip</p>
+                            <p class="pt-0 brand">
+                            <img src="./assets/logo.png" alt="tripnepal" style="width: 10rem;"/>
+                            </p>
                         </div>
 
                     </div>
