@@ -557,6 +557,7 @@ nav.navbar-white .fa-bars{
 .list-container{
     margin-top: 50px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 .search-listing{

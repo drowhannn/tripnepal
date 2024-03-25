@@ -18,6 +18,8 @@ if (isset($_GET["loc"])) {
 } else {
     $location = "";
 }
+
+$page_number = isset($_GET["page"]) && is_numeric($_GET["page"]) && $_GET["page"] > 0 ? filter_var($_GET["page"], FILTER_VALIDATE_INT) : 1;
 ?>
 
 <body>
@@ -33,17 +35,31 @@ if (isset($_GET["loc"])) {
 
     <div class='container'>
         <div class='list-container'>
+            <div class='right-col'>
+                <div>
+                </div>
+                <div class='sidebar'>
+                    <p>Search for your desired destination and get <span class="brand brand-inline">triptrip</span> selected packages.</0>
+                    <form class='search-listing' id="search-form">
+                        <?php
+                        echo "<input type='text' id='sidebar-search-input' name='sidebar-search-input' value=\"$location\" placeholder='Where are you going?'>";
+                        ?>
+                        <button type='submit'><i class='fa-solid fa-magnifying-glass'></i></button>
+                    </form>
+                </div>
+            </div>
             <div class='left-col'>
                 <?php
                 $packages = new Packages();
 
                 if ($location != "") {
                     $allPackages = $packages->getPackagesWithQueryCount($location);
-                    $res = $packages->getPackages($location, 0, 5);
+                    $res = $packages->getPackages($location, ($page_number - 1) * 5, 5);
                 } else {
                     $allPackages = $packages->getPackagesCount();
-                    $res = $packages->getPackages("All", 0, 5);
+                    $res = $packages->getPackages("", ($page_number - 1) * 5, 5);
                 }
+              
                 echo "<p class='available-package'>Total <span id='all-packages-count'>$allPackages</span> Package(s) Available</p>
                 <h1>Find Your Suitable Package in <span class='brand'>triptrip</span></h1>
                 <div class='package-container'>";
@@ -105,33 +121,22 @@ if (isset($_GET["loc"])) {
                 echo "</div>";
                 ?>
             </div>
-            <div class='right-col'>
-                <div>
-                </div>
-                <div class='sidebar'>
-                    <p>Search for your desired destination and get <span class="brand brand-inline">triptrip</span> selected packages.</0>
-                    <form class='search-listing' id="search-form">
-                        <?php
-                        echo "<input type='text' id='sidebar-search-input' name='sidebar-search-input' value=\"$location\" placeholder='Where are you going?'>";
-                        ?>
-                        <button type='submit'><i class='fa-solid fa-magnifying-glass'></i></button>
-                    </form>
-                </div>
-            </div>
         </div>
 
-        <div class='pagination'>
-            <i class='fa-solid fa-chevron-left'></i>
-            <span class='current pagination-btn' data-target='1' onclick='paginationBtnHandle()'>1</span>
-            <div class="pagination-btns-container">
-                <?php
-                for ($i = 2; $i < ($allPackages / 5) + 1; $i++) {
-                    echo "<span class='pagination-btn' data-target='" . $i . "' onclick='paginationBtnHandle()'>" . $i . "</span>";
-                }
-                ?>
-            </div>
-            <i class='fa-solid fa-chevron-right'></i>
-        </div>
+        <?php
+        echo "<div class='pagination'
+        style='display: " . ($allPackages < 5 ? "none" : "flex") . "'
+        >        
+        <i class='fa-solid fa-chevron-left'></i>
+        <span class='current pagination-btn' data-target='1' onclick='paginationBtnHandle()'>1</span>
+        <div class='pagination-btns-container'>";
+        for ($i = 2; $i < ($allPackages / 5) + 1; $i++) {
+            echo "<span class='pagination-btn' data-target='" . $i . "' onclick='paginationBtnHandle()'>" . $i . "</span>";
+        }
+        echo "</div>
+        <i class='fa-solid fa-chevron-right'></i>
+        </div>";
+        ?>
     </div>
     <!-- ===========footer=================== -->
     <?php include "./components/_footer.php" ?>
@@ -204,7 +209,7 @@ if (isset($_GET["loc"])) {
                     </div>
                     <div><a href='./package.php?id=${package_id}' class='btn'>View Details</a></div>
                     <div class='package-price'>
-                        <h4>Rs. {package_price} <span>Starting Price</span></h4>
+                        <h4>Rs. ${package_price} <span>Starting Price</span></h4>
                     </div>
                 </div>
             </div>`;
@@ -217,6 +222,7 @@ if (isset($_GET["loc"])) {
                 else res += `<span class='pagination-btn' data-target='${i}' onclick='paginationBtnHandle()'>${i}</span>`;
             }
             $(".pagination-btns-container").html(res);
+            history.replaceState(null, null, `listing.php?loc=${query}&page=${page}`);
         };
 
         const ajaxCall = async (query, start = 1, end = 5000, page) => {
@@ -242,6 +248,16 @@ if (isset($_GET["loc"])) {
                     $("html, body").animate({
                         scrollTop: 0
                     });
+                    if (query === "") {
+                        history.replaceState(null, null, "listing.php");
+                    } else {
+                        history.replaceState(null, null, `listing.php?loc=${query}`);
+                    }
+                    if (parseInt(data[0]) < 5) {
+                        $(".pagination").css("display", "none");
+                    } else {
+                        $(".pagination").css("display", "flex");
+                    }
                 },
                 error: (data) => {
                     console.log("Error");

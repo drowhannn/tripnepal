@@ -116,7 +116,7 @@ class Packages extends Database
 
         $location = mysqli_real_escape_string($this->conn, $location);
 
-        $sql = "SELECT * FROM packages WHERE package_location LIKE '%$location%'";
+        $sql = "SELECT * FROM packages WHERE package_location LIKE '%$location%' OR package_name LIKE '%$location%'";
         $result = $this->conn->query($sql);
         $this->conn->close();
         return $result->num_rows;
