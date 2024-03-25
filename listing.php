@@ -13,12 +13,10 @@ if (!isset($_SESSION)) {
 <?php include './components/_head.php' ?>
 <?php
 // error_reporting(0);
-if (isset($_GET["loc"]) && isset($_GET['g'])) {
+if (isset($_GET["loc"])) {
     $location = ($_GET["loc"]);
-    $guest = $_GET["g"];
 } else {
     $location = "";
-    $guest = 0;
 }
 ?>
 

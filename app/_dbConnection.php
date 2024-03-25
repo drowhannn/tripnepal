@@ -75,7 +75,7 @@ class Packages extends Database
         if ($location == "All") {
             $sql = "SELECT * FROM packages ORDER BY package_id DESC LIMIT $start,$end";
         } else {
-            $sql = "SELECT * FROM packages WHERE package_location LIKE '%$location%' ORDER BY package_id DESC LIMIT $start,$end";
+            $sql = "SELECT * FROM packages WHERE package_location LIKE '%$location%' OR package_name LIKE '%$location%' ORDER BY package_id DESC LIMIT $start,$end";
         }
 
         $result = $this->conn->query($sql);

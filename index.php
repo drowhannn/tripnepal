@@ -118,8 +118,7 @@
         $("#search_form").submit(e => {
             e.preventDefault();
             var loc = $("#location").val();
-            var guest = $("#guest").val();
-            window.location = `http://localhost/triptrip/listing.php?loc=${loc}&g=${guest}`;
+            window.location = `http://localhost/triptrip/listing.php?loc=${loc}`;
         })
     </script>
 </body>
