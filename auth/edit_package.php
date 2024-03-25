@@ -49,6 +49,7 @@ if ($res->num_rows == 0) {
     $is_food = $package['is_food'];
     $is_guide = $package['is_guide'];
     $is_exclusive = $package['is_exclusive'];
+    $keywords = $package['keywords'];
     // var_dump($package);
 }
 
@@ -137,8 +138,13 @@ if ($res->num_rows == 0) {
                         <input type="checkbox" name="is_exclusive" id="is_exclusive"
                             value="<?php echo $is_exclusive ?>" <?php if ($is_exclusive == 1) echo 'checked' ?> > <label
                         > <label for="is_exclusive">Exclusive</label>
+                       <div>
+                        <div class="input-group">
+                            <label for="keywords">Keywords</label>
+                            <input type="text" name="keywords" id="keywords" value="<?php echo $keywords ?>">
+                        </div>
                     </div>
-                    <div class="row">
+                    <div class="row" style="margin-top: 1rem">
                         <input type="submit" value="Update" name="submit" class="btn" />
                     </div>
                 </div>

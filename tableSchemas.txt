@@ -35,6 +35,8 @@ CREATE TABLE `packages` (
 	`master_image` TEXT NULL DEFAULT NULL,
 	`extra_image_1` TEXT NULL DEFAULT NULL,
 	`extra_image_2` TEXT NULL DEFAULT NULL,
+	`is_exclusive` BOOLEAN DEFAULT FALSE,
+	`keywords` TEXT NULL DEFAULT NULL,
 	PRIMARY KEY (`package_id`)
 )
 ;

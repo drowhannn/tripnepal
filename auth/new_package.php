@@ -96,8 +96,12 @@ if (!isset($_SESSION["is_admin"])) {
                             <label>Additional Info</label>
                         </div>
                         <input type="checkbox" name="is_exclusive" id="is_exclusive"> <label for="is_exclusive">Exclusive</label>
+                        <div class="input-group">
+                            <label for="keywords">Keywords</label>
+                            <textarea name="keywords" rows="5" id="keywords"></textarea>
+                        </div>
                     </div>
-                    <div class="row">
+                    <div class="row" style="margin-top: 1rem">
                         <input type="submit" value="Submit" name="submit" class="btn" />
                     </div>
                 </div>
