@@ -73,7 +73,7 @@ if (isset($_SESSION['logged_in'])) {
                 "<li>
             <i class='fa-solid fa-hotel'></i>Hotel <br>
             <span>
-                Hotel is<strong class='brand-inline brand'>tripnepal </strong> verified with excellent
+                Hotel is verified with excellent
                 customer service.
             </span>
         </li>";
