@@ -41,7 +41,7 @@ class Packages extends Database
 
         $sql = "INSERT INTO packages (package_name,package_desc,package_start,package_end,package_price,package_location,is_hotel,is_transport,is_food,is_guide,package_capacity,map_loc,master_image,extra_image_1,extra_image_2,is_exclusive,keywords,no_of_people)
         VALUES
-        ('" . $package_name . "', '" . $package_desc . "', '" . $package_start . "', '" . $package_end . "', '" . $package_price . "', '" . $package_location . "', '" . $is_hotel . "', '" . $is_transport . "', '" . $is_food . "', '" . $is_guide . "', '" . $package_capacity . "', '" . $map_loc . "', '" . $master_image . "', '" . $extra_image_1 . "', '" . $extra_image_2 . "', '" . $is_exclusive . "', '" . $keywords . "')" . ", '" . $no_of_people . "'";
+        ('" . $package_name . "', '" . $package_desc . "', '" . $package_start . "', '" . $package_end . "', '" . $package_price . "', '" . $package_location . "', '" . $is_hotel . "', '" . $is_transport . "', '" . $is_food . "', '" . $is_guide . "', '" . $package_capacity . "', '" . $map_loc . "', '" . $master_image . "', '" . $extra_image_1 . "', '" . $extra_image_2 . "', '" . $is_exclusive . "', '" . $keywords  . "', '" . $no_of_people . "')";
 
         $this->conn->query($sql);
 
