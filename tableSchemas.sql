@@ -8,8 +8,8 @@ CREATE TABLE `users` (
 	`phone` VARCHAR(15) NULL DEFAULT NULL  ,
 	`address` TEXT NULL DEFAULT NULL  ,
 	`full_name` VARCHAR(255) NULL DEFAULT NULL ,
-	PRIMARY KEY (`id`)
 	`account_status` INT(10) NULL DEFAULT '1',
+	PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `packages` (
@@ -27,6 +27,7 @@ CREATE TABLE `packages` (
 	`is_guide` INT(10) NULL DEFAULT '0',
 	`package_capacity` INT(10) NULL DEFAULT '0',
 	`package_booked` INT(10) UNSIGNED NULL DEFAULT '0',
+	`no_of_people` INT(10) NOT NULL DEFAULT '1',
 	`map_loc` TEXT NULL DEFAULT NULL,
 	`master_image` TEXT NULL DEFAULT NULL,
 	`extra_image_1` TEXT NULL DEFAULT NULL,
