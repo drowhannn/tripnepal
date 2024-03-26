@@ -47,12 +47,9 @@ if (!isset($_SESSION)) {
         <input value="Submit" type="submit">
     </form>
 
-    <button id="submit" onclick="submitForm()">Pay with eSewa</button>
     <script>
-        function submitForm() {
+        document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("esewa_form").submit();
-        }
+        });
     </script>
 </body>
-
-
