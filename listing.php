@@ -41,7 +41,7 @@ $page_number = isset($_GET["page"]) && is_numeric($_GET["page"]) && $_GET["page"
                 <div>
                 </div>
                 <div class='sidebar'>
-                    <p>Search for your desired destination and get <span class="brand brand-inline">tripnepal</span> selected packages.</0>
+                    <p>Search for your desired destination and get selected packages.</0>
                     <form class='search-listing' id="search-form">
                         <?php
                         echo "<input type='text' id='sidebar-search-input' name='sidebar-search-input' value=\"$location\" placeholder='Where are you going?'>";
