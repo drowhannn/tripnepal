@@ -57,6 +57,10 @@ if (!isset($_SESSION["is_admin"])) {
                             <label for="capacity">Package Capacity</label>
                             <input required type="number" name="capacity" id="capacity">
                         </div>
+                        <div class="input-group">
+                            <label for="no_of_people">Number of people</label>
+                            <input required type="number" name="no_of_people" id="no_of_people">
+                        </div>
                     </div>
                     <div class="row">
                         <div class="input-group">

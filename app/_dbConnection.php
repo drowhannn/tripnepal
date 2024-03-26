@@ -39,16 +39,16 @@ class Packages extends Database
         $extra_image_2 = mysqli_real_escape_string($this->conn, $extra_image_2);
         $keywords = mysqli_real_escape_string($this->conn, $keywords);
 
-        $sql = "INSERT INTO packages (package_name,package_desc,package_start,package_end,package_price,package_location,is_hotel,is_transport,is_food,is_guide,package_capacity,map_loc,master_image,extra_image_1,extra_image_2,is_exclusive,keywords)
+        $sql = "INSERT INTO packages (package_name,package_desc,package_start,package_end,package_price,package_location,is_hotel,is_transport,is_food,is_guide,package_capacity,map_loc,master_image,extra_image_1,extra_image_2,is_exclusive,keywords,no_of_people)
         VALUES
-        ('" . $package_name . "', '" . $package_desc . "', '" . $package_start . "', '" . $package_end . "', '" . $package_price . "', '" . $package_location . "', '" . $is_hotel . "', '" . $is_transport . "', '" . $is_food . "', '" . $is_guide . "', '" . $package_capacity . "', '" . $map_loc . "', '" . $master_image . "', '" . $extra_image_1 . "', '" . $extra_image_2 . "', '" . $is_exclusive . "', '" . $keywords . "')";
+        ('" . $package_name . "', '" . $package_desc . "', '" . $package_start . "', '" . $package_end . "', '" . $package_price . "', '" . $package_location . "', '" . $is_hotel . "', '" . $is_transport . "', '" . $is_food . "', '" . $is_guide . "', '" . $package_capacity . "', '" . $map_loc . "', '" . $master_image . "', '" . $extra_image_1 . "', '" . $extra_image_2 . "', '" . $is_exclusive . "', '" . $keywords . "')" . ", '" . $no_of_people . "'";
 
         $this->conn->query($sql);
 
         $this->conn->close();
         return "200";
     }
-    public function updatePackage($package_id, $package_name, $package_desc, $package_start, $package_end, $package_price, $package_location, $is_hotel, $is_transport, $is_food, $is_guide, $package_capacity, $map_loc, $master_image, $extra_image_1, $extra_image_2, $is_exclusive, $keywords)
+    public function updatePackage($package_id, $package_name, $package_desc, $package_start, $package_end, $package_price, $package_location, $is_hotel, $is_transport, $is_food, $is_guide, $package_capacity, $map_loc, $master_image, $extra_image_1, $extra_image_2, $is_exclusive, $keywords, $no_of_people)
     {
         $this->connect();
         $package_name = mysqli_real_escape_string($this->conn, $package_name);
@@ -61,7 +61,7 @@ class Packages extends Database
         $keywords = mysqli_real_escape_string($this->conn, $keywords);
 
         $sql = "UPDATE packages 
-                SET package_name = '$package_name', package_desc = '$package_desc', package_start = '$package_start', package_end = '$package_end',  package_price = $package_price, package_location = '$package_location', is_hotel = $is_hotel, is_transport = $is_transport, is_food = $is_food,is_guide = $is_guide,package_capacity = $package_capacity,map_loc = '$map_loc',master_image = '$master_image',extra_image_1 = '$extra_image_1',extra_image_2 = '$extra_image_2', is_exclusive = $is_exclusive, keywords = '$keywords'
+                SET package_name = '$package_name', package_desc = '$package_desc', package_start = '$package_start', package_end = '$package_end',  package_price = $package_price, package_location = '$package_location', is_hotel = $is_hotel, is_transport = $is_transport, is_food = $is_food,is_guide = $is_guide,package_capacity = $package_capacity,map_loc = '$map_loc',master_image = '$master_image',extra_image_1 = '$extra_image_1',extra_image_2 = '$extra_image_2', is_exclusive = $is_exclusive, keywords = '$keywords', no_of_people = $no_of_people
                 WHERE package_id = $package_id";
 
         $this->conn->query($sql);
