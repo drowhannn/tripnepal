@@ -19,8 +19,8 @@ $secret = "8gBm/:&EnhH.1/q";
 $tax_amount = 0;
 $product_service_charge = 0;
 $product_delivery_charge = 0;
-$success_url = "http://localhost/triptrip/success.php";
-$failure_url = "http://localhost/triptrip/fail.php";
+$success_url = "http://localhost/tripnepal/success.php";
+$failure_url = "http://localhost/tripnepal/fail.php";
 $signed_field_names = "total_amount,transaction_uuid,product_code";
 $signature = base64_encode(hash_hmac('sha256', $message, $secret, true));
 

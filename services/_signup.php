@@ -82,7 +82,7 @@ if (isset($_POST['newUser']) && isset($_POST['username']) && isset($_POST['email
     if ($auth->createUser($username, $email, $pass) == '200') {
         $mailHtml = "<div>
         <h3>Welcome $username to tripnepal. Travel Nepal like never before. <br>
-        <a href='http://localhost/triptrip/listing.php'>Check our recommended packages</a> and start planning for your next trip!
+        <a href='http://localhost/tripnepal/listing.php'>Check our recommended packages</a> and start planning for your next trip!
         </div>";
         // smtp_mailer($email, 'Account Verification', $mailHtml);
         echo '200';
