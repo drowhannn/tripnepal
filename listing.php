@@ -8,7 +8,7 @@ if (!isset($_SESSION)) {
 
 <head>
     <?php include_once './app/_dbConnection.php' ?>
-    <title>Triptrip - Listings</title>
+    <title>TripNepal - Listings</title>
 </head>
 <?php include './components/_head.php' ?>
 <?php
