@@ -422,10 +422,10 @@ class Transactions extends Database
         $this->conn->close();
         return $total;
     }
-    public function createNewTransaction($trans_id, $user_id, $package_id, $trans_amount, $trans_date, $card_no, $val_id, $card_type)
+    public function createNewTransaction($trans_id, $user_id, $package_id, $trans_amount, $trans_date, $card_type)
     {
         $this->connect();
-        $sql = "INSERT INTO transactions (trans_id,user_id,package_id,trans_amount,trans_date,card_no,val_id,card_type) VALUES ('" . $trans_id . "'," . $user_id . "," . $package_id . "," . $trans_amount . ",'" . $trans_date . "','" . $card_no . "','" . $val_id . "','" . $card_type . "')";
+        $sql = "INSERT INTO transactions (trans_id,user_id,package_id,trans_amount,trans_date,card_type) VALUES ('" . $trans_id . "'," . $user_id . "," . $package_id . "," . $trans_amount . ",'" . $trans_date . "','" . $card_type . "')";
         $this->conn->query($sql);
         $this->conn->close();
         return "200";

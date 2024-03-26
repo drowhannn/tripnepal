@@ -23,6 +23,12 @@ $success_url = "http://localhost/triptrip/success.php";
 $failure_url = "http://localhost/triptrip/fail.php";
 $signed_field_names = "total_amount,transaction_uuid,product_code";
 $signature = base64_encode(hash_hmac('sha256', $message, $secret, true));
+
+if (!isset($_SESSION)) {
+    session_start();
+    $_SESSION["package_id"] = $_GET['package'];
+}
+
 ?>
 
 <body>
