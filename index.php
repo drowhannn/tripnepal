@@ -4,7 +4,7 @@
 <head>
     <?php include_once './app/_dbConnection.php' ?>
     <?php include "./components/_head.php" ?>
-    <title>Triptrip</title>
+    <title>TripNepal</title>
 </head>
 
 <body>

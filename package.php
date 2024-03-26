@@ -8,7 +8,7 @@ if (!isset($_SESSION)) {
 
 <head>
     <?php include './components/_head.php' ?>
-    <title>Triptrip - Package</title>
+    <title>TripNepal - Package</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
     <link rel="stylesheet" href="./assets/css/package.css">
 </head>
