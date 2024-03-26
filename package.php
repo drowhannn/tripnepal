@@ -137,7 +137,7 @@ if (isset($_SESSION['logged_in'])) {
         <div class='small-details'>
             <h3>Tour Starts: " . $row["package_start"] . "</h3>
             <h3>Tour Ends: " . $row["package_end"] . "</h3>
-            <h3>Package Capacity: " . $row["package_capacity"] . " Person</h3>
+            <h3>No of people: " . $row["no_of_people"] . " Person</h3>
 
             <h4> Rs." . $row["package_price"] . " / All Inclusive</h4>
             <div>

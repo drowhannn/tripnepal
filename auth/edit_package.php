@@ -39,6 +39,7 @@ if ($res->num_rows == 0) {
     $package_end = $package['package_end'];
     $package_price = $package['package_price'];
     $package_capacity = $package['package_capacity'];
+    $no_of_people = $package['no_of_people'];
     $package_location = $package['package_location'];
     $map_loc = $package['map_loc'];
     $master_image = $package['master_image'];
@@ -97,6 +98,10 @@ if ($res->num_rows == 0) {
                         <div class="input-group">
                             <label for="capacity">Package Capacity</label>
                             <input required type="number" name="capacity" id="capacity" value="<?php echo $package_capacity ?>">
+                        </div>
+                        <div class="input-group">
+                            <label for="no_of_people">Number of people</label>
+                            <input required type="number" name="no_of_people" id="no_of_people" value="<?php echo $no_of_people ?>">
                         </div>
                     </div>
                     <div class="row">
