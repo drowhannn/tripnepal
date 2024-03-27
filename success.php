@@ -28,4 +28,5 @@ $count = $count + 1;
 $packagesInstance->updatePackagePurchase($package_id, $count);
 
 header("Location: ./auth/user_dashboard.php");
+$_SESSION['package_id'] = null;
 ?>
