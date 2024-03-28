@@ -97,8 +97,13 @@ if (!isset($_SESSION['is_admin'])) {
                                     <p> Rs. " . $activePackage['package_price'] . " / All Inclusive</p>
                                     <p>Tour Start: " . $activePackage['package_start'] . "</p>
                                 </div>
+                                <div>
                                 <div class='btn'>
                                     <a  href='./edit_package.php?id=" . $activePackage['package_id'] . "'>Edit</a>
+                                </div>
+                                <div class='btn'>
+                                <a  href='./services/_deletePackage.php?id=" . $activePackage['package_id'] . "'>Delete</a>
+                                </div>
                                 </div>
                             </div>
                             </div>
@@ -143,8 +148,14 @@ if (!isset($_SESSION['is_admin'])) {
                                     <p> Rs." . $prevPackage['package_price'] . " / All Inclusive</p>
                                     <p>Tour Start: " . $prevPackage['package_start'] . "</p>
                                 </div>
+                                <div>
+                            
                                 <div class='btn'>
                                 <a  href='./edit_package.php?id=" . $prevPackage['package_id'] . "'>Edit</a>
+                                </div>
+                                <div class='btn'>
+                                <a  href='./services/_deletePackage.php?id=" . $prevPackage['package_id'] . "'>Delete</a>
+                                </div>
                                 </div>
                             </div>
                             </div>

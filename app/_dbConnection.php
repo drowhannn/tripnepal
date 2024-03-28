@@ -143,6 +143,14 @@ class Packages extends Database
         $this->conn->close();
         return '200';
     }
+    public function deletePackage($id)
+    {
+        $this->connect();
+        $sql = "DELETE FROM packages WHERE package_id = $id";
+        $this->conn->query($sql);
+        $this->conn->close();
+        return '200';
+    }
 }
 
 class Blogs extends Database
