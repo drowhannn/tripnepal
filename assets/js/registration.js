@@ -41,7 +41,16 @@ $("#signinBtn").click((e) => {
             pass: pass,
           },
           success: (data) => {
-            window.location.replace("./index.php");
+           const url = new URL(window.location.href);
+            const redirect = url.searchParams.get("redirect");
+            if(redirect)
+            {
+              window.location.href = redirect
+            }
+            else
+            {
+              window.location.href = "./";
+            }
           },
         error: (data) => {
           if (data.statusText === "User Not Found") alert("danger", "User Not Found");

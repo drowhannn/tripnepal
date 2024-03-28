@@ -263,7 +263,7 @@ if (isset($_SESSION['logged_in'])) {
                 },
                 error: (data) => {
                     if (data.statusText === "Forbidden") {
-                        $(".status-msg").html("Sign in first. <a href='./registration.php'>Click Here</a>");
+                        $(".status-msg").html("Sign in first. <a href='./registration.php?redirect=http://localhost/tripnepal/package.php?id=<?php echo $package_id; ?> '>Click Here</a>");
                     } else if (data.statusText === "Finished") {
                         $(".status-msg").html("Sorry this package is already finished.");
                     }
