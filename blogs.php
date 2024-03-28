@@ -9,39 +9,6 @@ if (!isset($_SESSION)) {
 <head>
     <?php include_once './app/_dbConnection.php' ?>
     <title>TripNepal - Blogs</title>
-    <style>
-  .blog-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-  }
-  .blog-card {
-    width: 300px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  .blog-card img {
-    width: 100%;
-    height: auto;
-  }
-  .blog-card .content {
-    padding: 15px;
-  }
-  .blog-card h2 {
-    margin-top: 0;
-  }
-  .blog-card p {
-    margin-bottom: 10px;
-  }
-  a{
-    text-decoration: none;
-    color: black;
-
-  }
-</style>
 </head>
 <?php include './components/_head.php' ?>
 <body>
@@ -56,23 +23,26 @@ if (!isset($_SESSION)) {
         <?php include("./components/_navBtns.php") ?>
     </nav>
 
+      <div style="max-width:1200px; margin:auto; padding:20px 0;">
 
-    <div class='blog-container'>
-       <?php
+    <?php
         $blogs = new Blogs();
-        $blogs = $blogs->getBlogs();
-        foreach ($blogs as $blog) {
-            echo '<a class="blog-card" href="./blog.php?id='. $blog['id'] . '">';
-            echo '<img src="' . $blog['image'] . '" alt="' . $blog['title'] . '">';
-            echo '<div class="content">';
-            echo '<h2>' . $blog['title'] . '</h2>';
-            echo '<p>' . substr($blog['content'], 0, 50) . '...</p>';
-            echo '<p>Author: ' . $blog['author'] . '</p>';
-            echo '</div>';
-            echo '</a>';
-          }
-          ?>
-    </div>
+        $blogs = $blogs->getBlogs(3);
+        ?>
+        <h1>Latest Blogs</h1>
+        <div class="stories">
+            <?php
+            foreach ($blogs as $blog) {
+                echo "<div class='travellers-card'>
+                <a href='./blog.php?id=" . $blog['id'] . "'>
+                    <img src='" . $blog['image'] . "'>
+                    <p><div>" . $blog['title'] . "</div></p>
+                </a>
+            </div>";
+            }
+            ?>
+            </div>
+          </div>
     <?php include "./components/_footer.php" ?>
 
 

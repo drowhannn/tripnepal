@@ -13,7 +13,7 @@ if (!isset($_SESSION)) {
 .container {
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 8px auto;
     padding: 0 8px;
   }

@@ -89,29 +89,24 @@
 
         <!-- ==============Travellers Stories============== -->
 
-        <h2 class="sub-title">Travellers Stories</h2>
+        <h2 class="sub-title">Blogs</h2>
+        <?php
+        $blogs = new Blogs();
+        $blogs = $blogs->getBlogs(3);
+        ?>
         <div class="stories">
-            <div class="travellers-card">
-                <a href="https://www.lonelyplanet.com/articles/how-to-trek-to-everest-base-camp" >
-                    <img src="https://lp-cms-production.imgix.net/2023-06/GettyImages-1146333065.jpg?auto=format&w=1440&h=810&fit=crop&q=75">
-                    <p><div>How to trek Mount Everest?</div>
-                    </p>
+            <?php
+            foreach ($blogs as $blog) {
+                echo "<div class='travellers-card'>
+                <a href='./blog.php?id=" . $blog['id'] . "'>
+                    <img src='" . $blog['image'] . "'>
+                    <p><div>" . $blog['title'] . "</div></p>
                 </a>
+            </div>";
+            }
+            ?>
             </div>
-            <div class="travellers-card">
-                <a href="https://www.lonelyplanet.com/articles/magnificent-mustang-trekking-nepals">
-                    <img src="https://lp-cms-production.imgix.net/features/2019/07/Mustang-landscape-Sml-11ac799ad12c.jpg?auto=format&w=1440&h=810&fit=crop&q=75">
-                    <p><div>Magnificent Mustang</div></p>
-                </a>
-            </div>
-            <div class="travellers-card">
-                <a href="https://www.lonelyplanet.com/articles/best-time-to-visit-nepal">
-                    <img src="https://lp-cms-production.imgix.net/2021-12/nepal%20kathmandu%20NurPhoto%20GettyImages-1091424406%20RM.jpg?auto=format&w=1440&h=810&fit=crop&q=75">
-                    <p><div>Best time to visit Nepal for temples</div></p>
-                </a>
-            </div>
-        </div>
-        <a href="https://www.lonelyplanet.com/articles" class="Start-btn">Go to travel blog</a>
+        <a href="./blogs.php" class="Start-btn">Go to travel blogs</a>
     </div>
     <!-- ===============footer================ -->
     <?php include "./components/_footer.php" ?>
