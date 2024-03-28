@@ -109,6 +109,14 @@ if (isset($_SESSION['logged_in'])) {
         </li>";
         }
 
+        // add exclusions
+        $features .= "<li>
+            <i class='fa-solid fa-exclamation'></i>Exclusions <br>
+            <span>
+            Clients are responsible for extra charges and personal expenses.
+            </span>
+        </li>";
+
         $features .= "</ul>";
 
         echo "<div class='package-details'>
@@ -139,8 +147,6 @@ if (isset($_SESSION['logged_in'])) {
             <h3>Tour Ends: " . $row["package_end"] . "</h3>
             <h3>No of people: " . $row["no_of_people"] . " Person</h3>
 
-            <p> Note: This package does not include extra expenses like shopping, personal expenses, etc.</p>
-
             <h4> Rs." . $row["package_price"] . " / All Inclusive</h4>
             <div>
                 <hr class='line'>";
@@ -158,6 +164,8 @@ if (isset($_SESSION['logged_in'])) {
 
         echo "<h2>The packages comes with <i class='fa-solid fa-chevron-down'></i></h2>
                     " . $features . "
+
+                
                 <hr class='line'>
                 <p class='package-desc'>" . $row['package_desc'] . "</p>
                 <hr class='line'>
