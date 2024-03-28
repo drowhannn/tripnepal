@@ -15,11 +15,11 @@ if (isset($_SESSION["logged_in"])) {
     <div class="registration-header">
         <nav id="navBar">
             <a href="./index.php" class="logo">
-                <img src="./assets/logo.png" alt="tripnepal" style="width: 10rem;"/>    
+                <img src="./assets/logo-white.png" alt="tripnepal" style="width: 10rem;"/>    
             </a>
             <ul class="nav-links">
                 <li><a href="./packages.php">Packages</a></li>
-                <li><a href="./blogs.php">Blogs</a></li>
+                <li><a href="./blogs.php">Travel blogs</a></li>
             </ul>
             <i class="fa-solid fa-bars" onclick="togglebtn()"></i>
         </nav>

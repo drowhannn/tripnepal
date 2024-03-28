@@ -568,9 +568,8 @@ nav.navbar-white .fa-bars{
 .search-listing{
     display: flex;
     position: relative;
-    max-width: 500px;
     width: 100%;
-    margin: auto ;
+    margin: 10px auto ;
 }
 .search-listing input{
     width: 100%;

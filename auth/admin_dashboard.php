@@ -33,7 +33,7 @@ $totalAmount = $transactionsInstance->getTotalTransactionAmount();
             <li><a href="./users.php"><i class="fa-solid fa-users"></i><span>Users</span></a></li>
             <li><a href="./packages.php"><i class="fa-solid fa-cube"></i><span>Packages</span></a> </li>
             <li><a href="./sales.php"><i class="fa-solid fa-money-bill-trend-up"></i><span>Sales</span></a> </li>
-            <li><a href="./blogs.php"><i class="fa-solid fa-money-bill-trend-up"></i><span>Blogs</span></a> </li>
+            <li><a href="./blogs.php"><i class="fa-solid fa-money-bill-trend-up"></i><span>Travel blogs</span></a> </li>
         </ul>
     </div>
     <div class="container">

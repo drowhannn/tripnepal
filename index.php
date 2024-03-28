@@ -15,7 +15,7 @@
         </a>
             <ul class="nav-links">
                 <li><a href="./packages.php">Packages</a></li>
-                <li><a href="./blogs.php">Blogs</a></li>
+                <li><a href="./blogs.php">Travel blogs</a></li>
             </ul>
             <?php include("./components/_navBtns.php") ?>
         </nav>
@@ -24,7 +24,7 @@
             <div class="search-bar">
                 <form method="post" id="search_form">
                     <div class="location-input">
-                        <label>Location</label>
+                        <label style="margin-bottom:4px;">Location</label>
                         <input required type="text" id="location" placeholder="Where are you going?">
                     </div>
                     <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -84,12 +84,12 @@
         <div class="cta">
             <h3>Awesome Packages <br> For you and your friends/family.</h3>
             <p>Great combo with unbeatable prices <br> transport, accomodation & food all inclusive.</p>
-            <a href="#" class="cta-btn">Book your first tour now!</a>
+            <a href="./packages.php" class="cta-btn">Book your first tour now!</a>
         </div>
 
         <!-- ==============Travellers Stories============== -->
 
-        <h2 class="sub-title">Blogs</h2>
+        <h2 class="sub-title">Travel blogs</h2>
         <?php
         $blogs = new Blogs();
         $blogs = $blogs->getBlogs(3);

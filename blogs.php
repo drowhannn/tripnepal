@@ -8,7 +8,7 @@ if (!isset($_SESSION)) {
 
 <head>
     <?php include_once './app/_dbConnection.php' ?>
-    <title>TripNepal - Blogs</title>
+    <title>TripNepal - Travel blogs</title>
 </head>
 <?php include './components/_head.php' ?>
 <body>
@@ -18,7 +18,7 @@ if (!isset($_SESSION)) {
         </a>
         <ul class='nav-links'>
             <li><a href='./packages.php'>Packages</a></li>
-            <li><a href='./blogs.php' class='active'>Blogs</a></li>
+            <li><a href='./blogs.php' class='active'>Travel blogs</a></li>
         </ul>
         <?php include("./components/_navBtns.php") ?>
     </nav>
@@ -29,7 +29,7 @@ if (!isset($_SESSION)) {
         $blogs = new Blogs();
         $blogs = $blogs->getBlogs(3);
         ?>
-        <h1>Latest Blogs</h1>
+        <h1>Latest Travel blogs</h1>
         <div class="stories">
             <?php
             foreach ($blogs as $blog) {

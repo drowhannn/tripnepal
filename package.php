@@ -48,7 +48,7 @@ if (isset($_SESSION['logged_in'])) {
         </a>
         <ul class='nav-links'>
             <li><a href='./packages.php'>Packages</a></li>
-            <li><a href='./blogs.php'>Blogs</a></li>
+            <li><a href='./blogs.php'>Travel blogs</a></li>
         </ul>
         <?php include("./components/_navBtns.php") ?>
     </nav>
@@ -138,6 +138,8 @@ if (isset($_SESSION['logged_in'])) {
             <h3>Tour Starts: " . $row["package_start"] . "</h3>
             <h3>Tour Ends: " . $row["package_end"] . "</h3>
             <h3>No of people: " . $row["no_of_people"] . " Person</h3>
+
+            <p> Note: This package does not include extra expenses like shopping, personal expenses, etc.</p>
 
             <h4> Rs." . $row["package_price"] . " / All Inclusive</h4>
             <div>

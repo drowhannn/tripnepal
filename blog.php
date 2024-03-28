@@ -8,7 +8,7 @@ if (!isset($_SESSION)) {
 
 <head>
     <?php include_once './app/_dbConnection.php' ?>
-    <title>TripNepal - Blogs</title>
+    <title>TripNepal - Travel blog</title>
     <style>
 .container {
     display: flex;
@@ -37,7 +37,7 @@ if (!isset($_SESSION)) {
         </a>
         <ul class='nav-links'>
             <li><a href='./packages.php'>Packages</a></li>
-            <li><a href='./blogs.php'>Blogs</a></li>
+            <li><a href='./blogs.php'>Travel blogs</a></li>
         </ul>
         <?php include("./components/_navBtns.php") ?>
     </nav>

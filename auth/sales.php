@@ -26,7 +26,7 @@ $totalAmount = $transactionsInstance->getTotalTransactionAmount();
             <li><a href="./admin_dashboard.php"><i class="fa-solid fa-chart-line"></i><span>Dashboard</span></a></li>
             <li><a href="./users.php"><i class="fa-solid fa-users"></i><span>Users</span></a></li>
             <li><a href="./packages.php"><i class="fa-solid fa-cube"></i><span>Packages</span></a> </li>
-            <li><a href="./blogs.php"><i class="fa-solid fa-cube"></i><span>Blogs</span></a> </li>
+            <li><a href="./blogs.php"><i class="fa-solid fa-cube"></i><span>Travel blogs</span></a> </li>
             <li class="active"><a href="./sales.php"><i class="fa-solid fa-money-bill-trend-up"></i><span>Sales</span></a> </li>
         </ul>
     </div>

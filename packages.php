@@ -29,7 +29,7 @@ $page_number = isset($_GET["page"]) && is_numeric($_GET["page"]) && $_GET["page"
         </a>
         <ul class='nav-links'>
             <li><a href='./packages.php' class='active'>Packages</a></li>
-            <li><a href='./blogs.php'>Blogs</a></li>
+            <li><a href='./blogs.php'>Travel blogs</a></li>
         </ul>
         <?php include("./components/_navBtns.php") ?>
     </nav>
@@ -62,8 +62,7 @@ $page_number = isset($_GET["page"]) && is_numeric($_GET["page"]) && $_GET["page"
                     $res = $packages->getPackages("", ($page_number - 1) * 5, 5);
                 }
               
-                echo "<p class='available-package'>Total <span id='all-packages-count'>$allPackages</span> Package(s) Available</p>
-                <h1>Find Your Suitable Package in <span class='brand'><img src='./assets/logo.png' alt='tripnepal' style='width: 10rem;'/></span></h1>
+                echo "<p class='available-package' style='margin-bottom: 8px;'>Total <span id='all-packages-count'>$allPackages</span> Package(s) Available</p>
                 <div class='package-container'>";
                 while ($row = mysqli_fetch_assoc($res)) {
                     $stars = "";

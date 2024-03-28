@@ -61,7 +61,7 @@ while ($row = mysqli_fetch_assoc($res)) {
         </a>
         <ul class='nav-links'>
         <li><a href="./packages.php">Packages</a></li>
-        <li><a href="./blogs.php">Blogs</a></li>
+        <li><a href="./blogs.php">Travel blogs</a></li>
         </ul>
         <?php
         if (isset($_SESSION["logged_in"])) {
