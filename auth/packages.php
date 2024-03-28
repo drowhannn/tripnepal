@@ -63,6 +63,10 @@ if (!isset($_SESSION['is_admin'])) {
                     <h2>Upcoming Packages</h2>
                     <div class='packages'>
                         <?php
+                         if(sizeof($activePackages) == 0){
+                            echo "<p>No Previous Packages</p>";
+                        }
+                        else{
                         foreach ($activePackages as $activePackage) {
                             // Package Features
                             $features = "<p class='icons'>";
@@ -109,57 +113,63 @@ if (!isset($_SESSION['is_admin'])) {
                             </div>
                                 ";
                         }
+                    }
                         ?>
                     </div>
                     <h2>Previous Packages</h2>
                     <div class='packages'>
                         <?php
-                        foreach ($prevPackages as $prevPackage) {
-                            // Package Features
-                            $features = "<p class='icons'>";
-                            if ($prevPackage["is_hotel"] == 1) {
-                                $features .=
-                                    "<i class='fa-solid fa-hotel'></i>";
-                            }
-                            if ($prevPackage["is_transport"] == 1) {
-                                $features .=
-                                    "<i class='fa-solid fa-bus-simple'></i>";
-                            }
-
-                            if ($prevPackage["is_food"] == 1) {
-                                $features .=
-                                    "<i class='fa-solid fa-utensils'></i>";
-                            }
-
-                            if ($prevPackage["is_guide"] == 1) {
-                                $features .=
-                                    "<i class='fa-solid fa-person-hiking'></i>";
-                            }
-                            $features .= "</p>";
-                            echo "
-                                <div class='package'>
-                                <div class='img-box'>
-                                <img src=" . $prevPackage['master_image'] . " alt='Thumbnail'>
-                            </div>
-                            <div class='details'>
-                                <div class='info'>
-                                " . $features . "
-                                    <p>" . $prevPackage['package_name'] . "</p>
-                                    <p> Rs." . $prevPackage['package_price'] . " / All Inclusive</p>
-                                    <p>Tour Start: " . $prevPackage['package_start'] . "</p>
+                        if(sizeof($prevPackages) == 0){
+                            echo "<p>No Previous Packages</p>";
+                        }
+                        else{
+                            foreach ($prevPackages as $prevPackage) {
+                                // Package Features
+                                $features = "<p class='icons'>";
+                                if ($prevPackage["is_hotel"] == 1) {
+                                    $features .=
+                                        "<i class='fa-solid fa-hotel'></i>";
+                                }
+                                if ($prevPackage["is_transport"] == 1) {
+                                    $features .=
+                                        "<i class='fa-solid fa-bus-simple'></i>";
+                                }
+    
+                                if ($prevPackage["is_food"] == 1) {
+                                    $features .=
+                                        "<i class='fa-solid fa-utensils'></i>";
+                                }
+    
+                                if ($prevPackage["is_guide"] == 1) {
+                                    $features .=
+                                        "<i class='fa-solid fa-person-hiking'></i>";
+                                }
+                                $features .= "</p>";
+                                echo "
+                                    <div class='package'>
+                                    <div class='img-box'>
+                                    <img src=" . $prevPackage['master_image'] . " alt='Thumbnail'>
                                 </div>
-                                <div>
-                            
-                                <div class='btn'>
-                                <a  href='./edit_package.php?id=" . $prevPackage['package_id'] . "'>Edit</a>
+                                <div class='details'>
+                                    <div class='info'>
+                                    " . $features . "
+                                        <p>" . $prevPackage['package_name'] . "</p>
+                                        <p> Rs." . $prevPackage['package_price'] . " / All Inclusive</p>
+                                        <p>Tour Start: " . $prevPackage['package_start'] . "</p>
+                                    </div>
+                                    <div>
+                                
+                                    <div class='btn'>
+                                    <a  href='./edit_package.php?id=" . $prevPackage['package_id'] . "'>Edit</a>
+                                    </div>
+                                    <div class='btn'>
+                                    <a  href='./services/_deletePackage.php?id=" . $prevPackage['package_id'] . "'>Delete</a>
+                                    </div>
+                                    </div>
                                 </div>
-                                <div class='btn'>
-                                <a  href='./services/_deletePackage.php?id=" . $prevPackage['package_id'] . "'>Delete</a>
                                 </div>
-                                </div>
-                            </div>
-                            </div>
-                                ";
+                                    ";
+                            }
                         }
                         ?>
                     </div>
