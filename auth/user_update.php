@@ -45,7 +45,7 @@ $full_name = $user['full_name'];
             <img src="./assets/logo.png" alt="tripnepal" style="width: 10rem;"/>
         </a>
         <ul class='nav-links'>
-            <li><a href="./listing.php">Packages</a></li>
+            <li><a href="./packages.php">Packages</a></li>
             <li><a href="./blogs.php">Blogs</a></li>
         </ul>
         <?php

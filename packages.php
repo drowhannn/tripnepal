@@ -28,7 +28,7 @@ $page_number = isset($_GET["page"]) && is_numeric($_GET["page"]) && $_GET["page"
         <img src="./assets/logo.png" alt="tripnepal" style="width: 10rem;"/>
         </a>
         <ul class='nav-links'>
-            <li><a href='./listing.php' class='active'>Packages</a></li>
+            <li><a href='./packages.php' class='active'>Packages</a></li>
             <li><a href='./blogs.php'>Blogs</a></li>
         </ul>
         <?php include("./components/_navBtns.php") ?>
@@ -224,7 +224,7 @@ $page_number = isset($_GET["page"]) && is_numeric($_GET["page"]) && $_GET["page"
                 else res += `<span class='pagination-btn' data-target='${i}' onclick='paginationBtnHandle()'>${i}</span>`;
             }
             $(".pagination-btns-container").html(res);
-            history.replaceState(null, null, `listing.php?loc=${query}&page=${page}`);
+            history.replaceState(null, null, `packages.php?loc=${query}&page=${page}`);
         };
 
         const ajaxCall = async (query, start = 1, end = 5000, page) => {
@@ -251,9 +251,9 @@ $page_number = isset($_GET["page"]) && is_numeric($_GET["page"]) && $_GET["page"
                         scrollTop: 0
                     });
                     if (query === "") {
-                        history.replaceState(null, null, "listing.php");
+                        history.replaceState(null, null, "packages.php");
                     } else {
-                        history.replaceState(null, null, `listing.php?loc=${query}`);
+                        history.replaceState(null, null, `packages.php?loc=${query}`);
                     }
                     if (parseInt(data[0]) < 5) {
                         $(".pagination").css("display", "none");

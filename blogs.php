@@ -36,6 +36,11 @@ if (!isset($_SESSION)) {
   .blog-card p {
     margin-bottom: 10px;
   }
+  a{
+    text-decoration: none;
+    color: black;
+
+  }
 </style>
 </head>
 <?php include './components/_head.php' ?>
@@ -45,7 +50,7 @@ if (!isset($_SESSION)) {
         <img src="./assets/logo.png" alt="tripnepal" style="width: 10rem;"/>
         </a>
         <ul class='nav-links'>
-            <li><a href='./listing.php'>Packages</a></li>
+            <li><a href='./packages.php'>Packages</a></li>
             <li><a href='./blogs.php' class='active'>Blogs</a></li>
         </ul>
         <?php include("./components/_navBtns.php") ?>
