@@ -1,44 +1,6 @@
 <?php
 include_once "../app/_dbConnection.php";
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require './phpmailer/src/Exception.php';
-require './phpmailer/src/PHPMailer.php';
-require './phpmailer/src/SMTP.php';
-
-function smtp_mailer($to, $subject, $msg)
-{
-    $mail = new PHPMailer();
-    try {
-        //Server settings
-        $mail->isSMTP(); //Send using SMTP
-        $mail->Host = 'smtp.gmail.com'; //Set the SMTP server to send through
-        $mail->SMTPAuth = true; //Enable SMTP authentication
-        $mail->Username = ''; //SMTP username
-        $mail->Password = ''; //SMTP password
-        $mail->SMTPSecure = 'tls'; //Enable  TLS encryption
-        $mail->Port = 587; //TCP port to connect to
-
-        //Recipients
-        $mail->setFrom('');
-        $mail->addAddress($to); //Add a recipient
-
-        //Content
-        $mail->isHTML(true); //Set email format to HTML
-        $mail->Subject = $subject;
-        $mail->Body = $msg;
-
-        if ($mail->send())
-            null;
-        else
-            die(header("HTTP/1.0 500 Internal Server Error Email"));
-    } catch (Exception $e) {
-        die(header("HTTP/1.0 500 Internal Server Error Email"));
-    }
-}
-
 function checkPass($pass)
 {
     $invalid = array("=", "*", "-", "#", "$", "'");
@@ -84,7 +46,6 @@ if (isset($_POST['newUser']) && isset($_POST['username']) && isset($_POST['email
         <h3>Welcome $username to tripnepal. Travel Nepal like never before. <br>
         <a href='http://localhost/tripnepal/packages.php'>Check our recommended packages</a> and start planning for your next trip!
         </div>";
-        // smtp_mailer($email, 'Account Verification', $mailHtml);
         echo '200';
     }
 }
