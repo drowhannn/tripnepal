@@ -43,21 +43,21 @@
             echo "<h2 class='sub-title'>Exclusive Packages</h2>
             <div class='exclusives'>";
             while ($row = mysqli_fetch_assoc($res)) {
-                echo "<div>
-                <a class='exclusive_link' href='./package.php?id=" . $row['package_id'] . "'>
+                echo "<a class='exclusive_link' href='./package.php?id=" . $row['package_id'] . "'>
+                <div>
                 <div>
                 <img src='" . $row['master_image'] . "'>
                
                
             </div>
-            </a>
+            </div>
             <div class='exclusive_div'>
             <span>
             <h3>" . $row['package_name'] . "</h3>
             <p>Starts @ Rs. " . $row['package_price'] . " </p>
         </span>
             </div>
-            </div>
+            </a>
             ";
             }
             echo "</div>";
@@ -68,19 +68,19 @@
         <h2 class="sub-title">Trending Places in Nepal</h2>
         <div class="trending">
             <div>
-                <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSaD8MQXhfdj36aBRxsCJxMWurXX4ORwwrm28kg4Ub4StkycAlNle7ShRGma95M5dOgumC2iEg-f82BMpZOwtWS4nvNbCgQZx62kEL7JN4">
+            <a href="/tripnepal/packages.php?loc=Mount Everest"><img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSaD8MQXhfdj36aBRxsCJxMWurXX4ORwwrm28kg4Ub4StkycAlNle7ShRGma95M5dOgumC2iEg-f82BMpZOwtWS4nvNbCgQZx62kEL7JN4"></a>
                 <h3><a href="/tripnepal/packages.php?loc=Mount Everest">Mount Everest</a></h3>
             </div>
             <div>
-                <img src="https://lh5.googleusercontent.com/p/AF1QipNdu5OF1YucfXVyRjuv12dExGX_RHewGeo0oeEE=w675-h390-n-k-no">
+            <a href="/tripnepal/packages.php?loc=Pokhara"><img src="https://lh5.googleusercontent.com/p/AF1QipNdu5OF1YucfXVyRjuv12dExGX_RHewGeo0oeEE=w675-h390-n-k-no"></a>
                 <h3><a href="/tripnepal/packages.php?loc=Pokhara">Pokhara</a></h3>
             </div>
             <div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/BRP_Lumbini_Mayadevi_temple.jpg">
+            <a href="/tripnepal/packages.php?loc=Lumbini"><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/BRP_Lumbini_Mayadevi_temple.jpg"></a>
                 <h3><a href="/tripnepal/packages.php?loc=Lumbini">Lumbini</a></h3>
             </div>
             <div>
-                <img src="https://www.andbeyond.com/wp-content/uploads/sites/5/indian-elephant-chitwan-nepal.jpg">
+            <a href="/tripnepal/packages.php?loc=Chitwan National Park"><img src="https://www.andbeyond.com/wp-content/uploads/sites/5/indian-elephant-chitwan-nepal.jpg"></a>
                 <h3><a href="/tripnepal/packages.php?loc=Chitwan National Park">Chitwan National Park</a></h3>
             </div>
         </div>

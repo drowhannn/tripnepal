@@ -282,9 +282,10 @@ a{
 
 .travellers-card{
     position: relative;
+    font-weight: bold;
 }
 
-.travellers-card::before{
+/* .travellers-card::before{
     content: "";
     position: absolute;
     top: 0;
@@ -293,7 +294,7 @@ a{
     width: 100%;
     background: rgba(0, 0, 0, 0.432);
     border-radius: 1rem;
-}
+} */
 
 .stories div img {
     height: 100%;
