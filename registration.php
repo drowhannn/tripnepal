@@ -46,7 +46,7 @@ if (isset($_SESSION["logged_in"])) {
                             <input required type="password" placeholder="Password" name="password" id="password">
                             <i class="fa-solid fa-eye show_password"></i>
                         </div>
-                        <p style="text-align: center; font-weight:bold">Remember your password carefully!</a></p>
+                        <p style="text-align: center; font-weight:bold; color:white;">Remember your password carefully!</a></p>
                     </div>
                     <div class="btn-field">
                         <button type="button" id="signupBtn">Sign up</button>
