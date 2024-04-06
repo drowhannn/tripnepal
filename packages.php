@@ -107,7 +107,6 @@ $page_number = isset($_GET["page"]) && is_numeric($_GET["page"]) && $_GET["page"
 
                     echo "<br>
                         " . $stars . "
-                        <p>" . $row['package_desc'] . "</p>
                         <div class='hotel-chekins'>
                         <h4>Tour Start: " . $row['package_start'] . "</h4>
                         <h4>Tour End: " . $row['package_end'] . "</h4>
