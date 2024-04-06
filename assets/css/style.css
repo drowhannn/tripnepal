@@ -29,7 +29,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("https://images.pexels.com/photos/117843/pexels-photo-117843.jpeg?auto=compress&cs=tinysrgb&w=1960&h=1080&dpr=1") no-repeat center center/cover;
+    background: url("../adventure-feature.png") no-repeat center center/cover;
     z-index: -1;
 }
 
@@ -243,7 +243,7 @@ a{
     width: 100%;
     height: 100%;
     background: linear-gradient(to left, #ff53616e, transparent),
-    url("https://images.pexels.com/photos/2664046/pexels-photo-2664046.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+    url("../01H8Y5N61QEGYRFZP21FRNNE14.webp") no-repeat center center/cover;
     z-index: -1;
     border-radius: 1rem;
 }
