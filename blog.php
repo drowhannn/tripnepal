@@ -17,6 +17,20 @@ if (!isset($_SESSION)) {
     margin: 8px auto;
     padding: 0 8px;
   }
+  .blog_content{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 10px 0;
+  }
+  .author_card{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    width: fit-content;
+  }
   h1 {
     margin-top: 0;
   }
@@ -53,8 +67,8 @@ if (!isset($_SESSION)) {
 
         echo '<h1>' . $blog['title'] . '</h1>';
         echo '<img src="' . $blog['image'] . '" alt="Blog Image">';
-        echo '<p>' . $blog['content'] . '</p>';
-        echo '<p>Author: ' . $blog['author'] . '</p>';
+        echo '<p class="blog_content">' . $blog['content'] . '</p>';
+        echo '<p class="author_card">Author: ' . $blog['author'] . '</p>';
         echo '</div>';
 
         include "./components/_footer.php";
