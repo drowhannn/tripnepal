@@ -159,6 +159,22 @@ a{
     justify-content: center;
 }
 
+.exclusive_link{
+    position: relative;
+}
+
+.exclusive_div {
+    width: 100%;
+    height: 100%;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+    z-index: 50;
+}
+
 .exclusives div img {
     width: 100%;
     max-height: 150px;

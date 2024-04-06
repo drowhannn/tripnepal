@@ -43,15 +43,21 @@
             echo "<h2 class='sub-title'>Exclusive Packages</h2>
             <div class='exclusives'>";
             while ($row = mysqli_fetch_assoc($res)) {
-                echo "<a href='./package.php?id=" . $row['package_id'] . "'>
+                echo "<div>
+                <a class='exclusive_link' href='./package.php?id=" . $row['package_id'] . "'>
                 <div>
                 <img src='" . $row['master_image'] . "'>
                 <span>
                     <h3>" . $row['package_name'] . "</h3>
                     <p>Starts @ Rs. " . $row['package_price'] . " </p>
                 </span>
+               
             </div>
-            </a>";
+            </a>
+            <div class='exclusive_div'>
+            </div>
+            </div>
+            ";
             }
             echo "</div>";
         }
