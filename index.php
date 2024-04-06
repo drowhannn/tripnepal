@@ -47,14 +47,15 @@
                 <a class='exclusive_link' href='./package.php?id=" . $row['package_id'] . "'>
                 <div>
                 <img src='" . $row['master_image'] . "'>
-                <span>
-                    <h3>" . $row['package_name'] . "</h3>
-                    <p>Starts @ Rs. " . $row['package_price'] . " </p>
-                </span>
+               
                
             </div>
             </a>
             <div class='exclusive_div'>
+            <span>
+            <h3>" . $row['package_name'] . "</h3>
+            <p>Starts @ Rs. " . $row['package_price'] . " </p>
+        </span>
             </div>
             </div>
             ";
