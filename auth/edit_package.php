@@ -162,6 +162,9 @@ if ($res->num_rows == 0) {
 <script>
     tinymce.init({
         selector: 'textarea#desc',
+        menubar: false,
+        plugins: 'lists',
+        toolbar: 'bold italic underline numlist bullist',
     });
 </script>
 

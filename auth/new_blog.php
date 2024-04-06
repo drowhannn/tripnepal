@@ -59,8 +59,10 @@ if (!isset($_SESSION["is_admin"])) {
 </body>
 <script>
 tinymce.init({
-  selector: 'textarea#blogTextarea',
-  menubar: false,
+    selector: 'textarea#blogTextarea',
+    menubar: false,
+    plugins: 'lists',
+    toolbar: 'bold italic underline numlist bullist',
 });
 </script>
 
