@@ -59,15 +59,15 @@ if (!isset($_SESSION["is_admin"])) {
                     } else {
                         while ($row = mysqli_fetch_assoc($blogs)) {
                             echo "
-                            <div class='package-card'>
+                            <div class='package-card' style='width: 300px;'>
                                 <div class='package-card-img'>
                                     <img src=".$row['image']." alt='blog image'
-                                        style='width: 100%; max-width:300px; height: 100%; object-fit: cover;' /
+                                        style='width: 100%; height: 200px; object-fit: cover;' /
                                     >
                                 </div>
                                 <div class='package-card-content'>
-                                    <h2>" . $row['title'] . "</h2>
-                                    <div class='package-card-footer'>
+                                    <h2 style='text-overflow: ellipsis; width:100%; overflow:hidden; white-space:nowrap;'>" . $row['title'] . "</h2>
+                                    <div class='package-card-footer' style='margin-top: 10px;'>
                                         <a href='./edit_blog.php?id=" . $row['id'] . "' class='btn'>Edit</a>
                                         <a href='./services/_deleteBlog.php?id=" . $row['id'] . "' class='btn'>Delete</a>
                                     </div>

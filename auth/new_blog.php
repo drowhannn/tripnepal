@@ -39,7 +39,7 @@ if (!isset($_SESSION["is_admin"])) {
                     </div>
                     <div class="input-group">
                         <label for="content">Blog Content</label>
-                        <textarea name="content" rows="5" id="content"></textarea>
+                        <textarea id="blogTextarea" name="content" rows="5" id="content"></textarea>
                     </div>
                     <div class="input-group">
                         <label for="image">Blog Image</label>
@@ -57,5 +57,11 @@ if (!isset($_SESSION["is_admin"])) {
         </div>
     </div>
 </body>
+<script>
+tinymce.init({
+  selector: 'textarea#blogTextarea',
+  menubar: false,
+});
+</script>
 
 </html>

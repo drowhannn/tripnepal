@@ -60,7 +60,7 @@ $user = mysqli_fetch_assoc($res);
                         <div class="text-center">
                             <i class="fab fa-mdb fa-4x ms-0"></i>
                             <p class="pt-0 brand">
-                            <img src="./assets/logo.png" alt="tripnepal" style="width: 10rem;"/>
+                            <img src="../assets/logo.png" alt="tripnepal" style="width: 10rem;"/>
                             </p>
                         </div>
 

@@ -73,7 +73,7 @@ td {
 }
 
 .side-menu {
-    width: 15%;
+    width: 18%;
     position: fixed;
     background: var(--primary-color);
     height: 100vh;

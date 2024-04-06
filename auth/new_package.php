@@ -114,4 +114,11 @@ if (!isset($_SESSION["is_admin"])) {
     </div>
 </body>
 
+<script>
+    tinymce.init({
+        selector: 'textarea#desc',
+        menubar: false
+    });
+</script>
+
 </html>

@@ -87,6 +87,10 @@ while ($row = mysqli_fetch_assoc($res)) {
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex flex-column align-items-center text-center">
+                                <div>
+                                    <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=" 
+                                    alt="Admin" class="rounded-circle" width="150">
+                                </div>    
                                 <div class="mt-3">
                                     <h4><?php echo $username ?></h4>
                                     <p class="text-muted font-size-sm">User since: <?php echo $date_created ?></p>

@@ -159,4 +159,10 @@ if ($res->num_rows == 0) {
     </div>
 </body>
 
+<script>
+    tinymce.init({
+        selector: 'textarea#desc',
+    });
+</script>
+
 </html>

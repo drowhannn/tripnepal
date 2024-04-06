@@ -10,4 +10,5 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <script src="https://cdn.tiny.cloud/1/gmcrmajidst0k6itxrqyws4r5pg5yxh6qwsiwvhmqasd1t35/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
