@@ -60,8 +60,8 @@ while ($row = mysqli_fetch_assoc($res)) {
             <img src="../assets/logo.png" alt="tripnepal" style="width: 10rem;"/>
         </a>
         <ul class='nav-links'>
-        <li><a href="./packages.php">Packages</a></li>
-        <li><a href="./blogs.php">Travel blogs</a></li>
+        <li><a href="../packages.php">Packages</a></li>
+        <li><a href="../blogs.php">Travel blogs</a></li>
         </ul>
         <?php
         if (isset($_SESSION["logged_in"])) {
