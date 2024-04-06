@@ -67,7 +67,6 @@ if (!isset($_SESSION["is_admin"])) {
                                 </div>
                                 <div class='package-card-content'>
                                     <h2>" . $row['title'] . "</h2>
-                                    <p>" . $row['content'] . "</p>
                                     <div class='package-card-footer'>
                                         <a href='./edit_blog.php?id=" . $row['id'] . "' class='btn'>Edit</a>
                                         <a href='./services/_deleteBlog.php?id=" . $row['id'] . "' class='btn'>Delete</a>
